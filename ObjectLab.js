@@ -32,4 +32,29 @@ me.placeOfResidence = "Los Angeles";
 
 console.log(me.placeOfResidence); 
 
+// Question 3 
 
+const monster = {   
+    name: "Slimer",
+    color: "greenish",   
+    type: "plasm or ghost or something",
+    
+    introduction(){
+        console.log(`Hello my name is ${this.name} I am exactly ${this.age} years old`);
+    }
+
+}; 
+
+console.log(monster.name); 
+
+monster.type = 'creature'; 
+
+console.log(monster.type); 
+
+monster.age = 6; 
+
+console.log(monster.age); 
+
+console.log(monster); 
+
+monster.introduction(); 
