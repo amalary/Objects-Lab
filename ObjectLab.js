@@ -112,6 +112,12 @@ console.log(cat1.age);
 console.log(cat1.breed); 
 
 
-
+let cat2 = {
+    name:'Felix', 
+    breed:'Persian', 
+    age:12, 
+}
+console.log(cat2.name); 
+console.log(cat2.breed); 
 
 
