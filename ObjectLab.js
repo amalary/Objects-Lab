@@ -108,6 +108,7 @@ let cat1 = {
     age: 2000, 
 }
 
+
 // console.log(cat1.age); 
 // console.log(cat1.breed); 
 
@@ -126,16 +127,16 @@ function combineCats(mama,papa){
     let cat3 = {
         age: 1, 
 
-
     }
 
     cat3.name = mama.name + papa.name;
 
     cat3.breed = `${mama.breed}-${papa.breed}`
 
-    console.log(cat3)
+    return cat3
 
 }; 
 
-combineCats(cat1,cat2)
+combineCats(cat1, cat2)
 
+console.log(combineCats(combineCats(cat1,cat2), combineCats(cat1, cat2))); 
