@@ -1,5 +1,7 @@
 // Syntax 
 
+const { normalize } = require("path/posix");
+
 
 let videoGames = {
     Nintento:"Pokemon",
@@ -58,3 +60,58 @@ console.log(monster.age);
 console.log(monster); 
 
 monster.introduction(); 
+
+// Apply 
+
+let Orge = { 
+    name:"Shrek",
+    health: 100,
+    hitpoints: 15,
+    greeting(){
+        console.log(`Hello my name is ${this.name} how you doing ?`); 
+    },
+
+    takeDamage(amount){
+        return this.health = this.health - amount; 
+
+    },
+
+    orgePunch(character)
+    {
+        return character.health = character.health - this.hitpoints; 
+    }
+};
+
+
+let Adventurer = {
+
+    name: 'Jaque', 
+    health: 100, 
+    hitpoints:25, 
+    greeting(){
+        console.log(`I'm the one and only ${this.name} and I'm here to defeat you`); 
+    },
+
+    takeDamage(amount){
+        return this.health = this.health - amount; 
+    }
+}
+console.log(Adventurer.takeDamage(Orge.hitpoints)); 
+console.log(Orge.takeDamage(Adventurer.hitpoints)); 
+
+
+// Hungry For More 
+
+let cat1 = {
+    name:'Garfield', 
+    breed: 'Sphynx Cat', 
+    age: 2000, 
+}
+
+console.log(cat1.age); 
+console.log(cat1.breed); 
+
+
+
+
+
