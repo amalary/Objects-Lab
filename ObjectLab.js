@@ -104,12 +104,12 @@ console.log(Orge.takeDamage(Adventurer.hitpoints));
 
 let cat1 = {
     name:'Garfield', 
-    breed: 'Sphynx Cat', 
+    breed: 'Sphynx', 
     age: 2000, 
 }
 
-console.log(cat1.age); 
-console.log(cat1.breed); 
+// console.log(cat1.age); 
+// console.log(cat1.breed); 
 
 
 let cat2 = {
@@ -117,7 +117,25 @@ let cat2 = {
     breed:'Persian', 
     age:12, 
 }
-console.log(cat2.name); 
-console.log(cat2.breed); 
+// console.log(cat2.name); 
+// console.log(cat2.breed); 
 
+
+function combineCats(mama,papa){
+
+    let cat3 = {
+        age: 1, 
+
+
+    }
+
+    cat3.name = mama.name + papa.name;
+
+    cat3.breed = `${mama.breed}-${papa.breed}`
+
+    console.log(cat3)
+
+}; 
+
+combineCats(cat1,cat2)
 
