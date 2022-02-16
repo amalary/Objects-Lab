@@ -72,7 +72,9 @@ let Orge = {
     },
 
     takeDamage(amount){
-        return this.health = this.health - amount; 
+        this.health = this.health - amount; 
+
+        console.log(`The Orgre lost ${this.health}`)
 
     },
 
@@ -93,11 +95,63 @@ let Adventurer = {
     },
 
     takeDamage(amount){
-        return this.health = this.health - amount; 
+
+        this.health = this.health - amount; 
+
+        console.log(`The Adveturer lost ${this.health}`)
+    },
+
+    swordSlash(character)
+    {
+        return character.health = character.health - this.hitpoints; 
+
     }
+    
+}; 
+
+while(Adventurer.health > 0 && Orge.health > 0){
+
+    if(Math.floor(Math.random()*2) == 0){
+        Orge.takeDamage(Adventurer.hitpoints)
+    }
+    else {
+        Adventurer.takeDamage(Orge.hitpoints); 
+    }
+};
+
+if(Adventurer.health == 0){
+
+    console.log('Surprisingly the Orge won!')
 }
+else { 
+    console.log('The Adeveturer saved the day'); 
+
+};
+
+// Logic gates 
+
+// Truth tables 
+
+
+
+
+
+
+console.log(Adventurer.swordSlash(Orge));
 console.log(Adventurer.takeDamage(Orge.hitpoints)); 
 console.log(Orge.takeDamage(Adventurer.hitpoints)); 
+
+let age = 2; 
+
+while(age < 10){
+    console.log(`You are now ${age} years old`);
+    age++
+}
+
+console.log("You're a big kid now"); 
+
+
+
 
 
 // Hungry For More 
